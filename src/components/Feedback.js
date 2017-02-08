@@ -6,7 +6,8 @@ class Feedback extends React.Component {
   submitFeedback( rating ){
 
     var room = document.getElementById("room").value;
-    var feedback = { room: room, rating: rating, time: new Date()}
+    var time = new Date()
+    var feedback = { room: room, rating: rating, time: time.toString() }
     
     this.props.submit( feedback );
   }
@@ -21,6 +22,8 @@ class Feedback extends React.Component {
               <option value="B">B</option>
               <option selected value="C">C</option>
               <option value="D">D</option>
+              <option value="E">E</option>
+              <option value="F">F</option>
             </select>
       
             <button onClick={() => this.submitFeedback(5)}> <img  src="http://www.clker.com/cliparts/d/E/Y/K/Q/E/happy-green-face-md.png"/></button>

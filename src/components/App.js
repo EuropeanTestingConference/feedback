@@ -7,10 +7,12 @@ class App extends React.Component {
   constructor() {
     super();
 
+   
+    this.submit = this.submit.bind(this);
   }
 
   state = {
-    rooms: {}
+    rooms: []
   };
 
   componentWillMount() {
@@ -27,7 +29,10 @@ class App extends React.Component {
 
 
   submit(  feedback )  {
-    console.log( {feedback} )
+    var rooms = this.state.rooms
+
+    rooms.push( feedback )
+    this.setState({ rooms } ) 
   }
 
   removeFromOrder(key) {
@@ -40,13 +45,6 @@ class App extends React.Component {
     return (
       <div className="conference-feedbac">
         <Header tagline="Fresh Seafood Market" />
-        <ul className="list-of-rooms">
-            {
-              Object
-                .keys(this.state.rooms)
-                .map(key => <Room key={key} index={key} />)
-            }
-        </ul>
         <Feedback room={this.state.rooms}
           submit={this.submit}
         />
