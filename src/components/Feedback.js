@@ -28,7 +28,7 @@ class Feedback extends React.Component {
 
             <button onClick={() => this.submitFeedback(5)}> <img  src="http://feedback.rinkkasatiainen.fi/Happy.png"/></button>
             <button onClick={() => this.submitFeedback(3)}>  <img src="http://feedback.rinkkasatiainen.fi/Meh.png"/></button>
-            <button onClick={() => this.submitFeedback(1)}> <img src="http://feedback.rinkkasatiainen.fi/Sad.png/> </button>
+            <button onClick={() => this.submitFeedback(1)}> <img src="http://feedback.rinkkasatiainen.fi/Sad.png"/> </button>
 
         </div>
     )
