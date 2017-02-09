@@ -17,10 +17,13 @@ class Feedback extends React.Component {
     return(
       <div>
 
-          <select id="room" >
-             <option value="A">A</option>
+        <br/>
+        <br/>
+        <br/>
+          Please Select Room: <select id="room" >
+             <option selected value="A">A</option>
               <option value="B">B</option>
-              <option selected value="C">C</option>
+              <option value="C">C</option>
               <option value="D">D</option>
               <option value="E">E</option>
               <option value="F">F</option>
