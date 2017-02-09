@@ -1,3 +1,15 @@
+.b1 {
+  -webkit-animation: fade-in-keyframes 0.2s;
+          animation: fade-in-keyframes 0.2s;
+}
+.b3 {
+  -webkit-animation: fade-in-keyframes 0.2s;
+          animation: fade-in-keyframes 0.2s;
+}
+.b5 {
+  -webkit-animation: fade-in-keyframes 0.1s;
+          animation: fade-in-keyframes 0.1s;
+}
 .order-enter {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -46,6 +58,22 @@
 .count-leave.count-leave-active {
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
+}
+@-webkit-keyframes fade-in-keyframes {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade-in-keyframes {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 @font-face {
   font-family: "haymakerregular";
