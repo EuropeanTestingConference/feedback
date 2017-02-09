@@ -29,7 +29,6 @@ class Feedback extends React.Component {
   }
 
   fadingDone( button ){
-    console.log( button )
     this.setState({[button]: false})
   }
 

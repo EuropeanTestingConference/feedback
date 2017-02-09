@@ -30,7 +30,6 @@ class App extends React.Component {
 
   submit(  feedback )  {
     base.database().ref('feedback').push ( feedback )
-    console.log ({feedback})
     //    var rooms = this.state.rooms
 
     //    rooms.push( feedback )
