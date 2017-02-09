@@ -17,22 +17,24 @@ class App extends React.Component {
 
   componentWillMount() {
     // this runs right before the <App> is rendered
-    this.ref = base.syncState(`feedback`, {
-      context: this,
-      state: 'rooms'
-    });
+    //  this.ref = base.syncState(`feedback`, {
+    // context: this,
+    // state: 'rooms'
+    // });
   }
 
   componentWillUnmount() {
-    base.removeBinding(this.ref);
+    //base.removeBinding(this.ref);
   }
 
 
   submit(  feedback )  {
-    var rooms = this.state.rooms
+    base.database().ref('feedback').push ( feedback )
+    console.log ({feedback})
+    //    var rooms = this.state.rooms
 
-    rooms.push( feedback )
-    this.setState({ rooms } ) 
+    //    rooms.push( feedback )
+    //    this.setState({ rooms } ) 
   }
 
   removeFromOrder(key) {

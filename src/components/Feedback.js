@@ -17,7 +17,7 @@ class Feedback extends React.Component {
     return(
       <div>
 
-          <select id="room">
+          <select id="room" >
              <option value="A">A</option>
               <option value="B">B</option>
               <option selected value="C">C</option>
@@ -25,11 +25,14 @@ class Feedback extends React.Component {
               <option value="E">E</option>
               <option value="F">F</option>
             </select>
+            <br/>
 
-            <button onClick={() => this.submitFeedback(5)}> <img  src="http://feedback.rinkkasatiainen.fi/Happy.png"/></button>
-            <button onClick={() => this.submitFeedback(3)}>  <img src="http://feedback.rinkkasatiainen.fi/Meh.png"/></button>
-            <button onClick={() => this.submitFeedback(1)}> <img src="http://feedback.rinkkasatiainen.fi/Sad.png"/> </button>
+            <div style={{widht:"100%"}}>
+            <button style={{"maxWidth": "30%"}} onClick={() => this.submitFeedback(1)}> <img style={{width:"100%"}} src="http://feedback.rinkkasatiainen.fi/Sad.png"/> </button>
+            <button style={{"maxWidth": "30%"}} onClick={() => this.submitFeedback(3)}>  <img style={{width:"100%"}} src="http://feedback.rinkkasatiainen.fi/Meh.png"/></button>
+            <button style={{"maxWidth": "30%"}} onClick={() => this.submitFeedback(5)}> <img style={{width:"100%"}} src="http://feedback.rinkkasatiainen.fi/Happy.png"/></button>
 
+          </div>
         </div>
     )
 
